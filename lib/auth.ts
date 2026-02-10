@@ -14,7 +14,7 @@ export const authOptions: NextAuthOptions = {
                 email: { label: "Email", type: "email" },
                 password: { label: "Password", type: "password" },
             },
-            async authorize(credentials) {
+            async authorize(credentials: Record<"email" | "password", string> | undefined): Promise<import("next-auth").User | null> {
                 if (!credentials?.email || !credentials?.password) {
                     return null;
                 }
@@ -45,6 +45,7 @@ export const authOptions: NextAuthOptions = {
                     name: user.name,
                     email: user.email,
                     role: user.role,
+                    isApproved: user.isApproved,
                 };
             },
         }),
