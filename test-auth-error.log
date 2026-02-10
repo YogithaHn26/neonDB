@@ -1,0 +1,4 @@
+{
+  "stack": "ReferenceError: users is not defined\n    at main (C:\\Users\\yogitha\\yogi1\\scripts\\test-auth-logic.ts:22:43)",
+  "message": "users is not defined"
+}
