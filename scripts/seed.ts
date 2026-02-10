@@ -15,8 +15,8 @@ async function main() {
     console.log("Starting seed process...");
 
     try {
-        const email = "admin@example.com";
-        const password = "adminpassword";
+        const email = "test@test.com";
+        const password = "Test123";
         console.log("Hashing password...");
         const hashedPassword = await hash(password, 10);
         console.log("Password hashed.");

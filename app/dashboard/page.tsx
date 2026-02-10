@@ -19,6 +19,9 @@ export default async function DashboardPage() {
             <header className="border-b bg-background px-6 py-4 flex items-center justify-between">
                 <h1 className="text-xl font-bold">Dashboard</h1>
                 <div className="flex items-center gap-4">
+                    <Button variant="ghost" asChild>
+                        <Link href="/dashboard/profile">Profile</Link>
+                    </Button>
                     <span>{session.user?.name}</span>
                     <SignOutButton />
                 </div>
